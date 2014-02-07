@@ -81,7 +81,6 @@ SVG.extend(SVG.Text, {
 			for (var li = 0; li < textLines.length; li++) {
 				tspan.text(textLines[li]);
 				var textWidth = tspan.node.getComputedTextLength();
-				console.log(textWidth);
 				if (textWidth > this.width()) {
 					/**
 					 * Method to splitt ext into lines.
@@ -91,7 +90,6 @@ SVG.extend(SVG.Text, {
 					 */
 					var splitText = function (testSpan, words) {
 						// Array of strings with acceptable lengths.
-						//debugger;
 						var retVal = [];
 						var currentText = "";
 						var computedTextLength = 0;//testSpan.node.getComputedTextLength();
@@ -133,7 +131,6 @@ SVG.extend(SVG.Text, {
 					wrappedLines.push(textLines[li]);
 				}
 			}
-			debugger;
 			tspan.remove();
 			node.removeChild(tspan.node);
 			return wrappedLines;
