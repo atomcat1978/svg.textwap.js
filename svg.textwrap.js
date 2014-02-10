@@ -30,8 +30,8 @@ SVG.extend(SVG.Text, {
 					// We reset the same text attribute to trigger text rebuild.
 					this.text(this._unwrappedText);
 				}
-
 			}
+			return this;
 		},
 
 
@@ -68,7 +68,6 @@ SVG.extend(SVG.Text, {
 
 				this.rebuild()
 			}
-
 			return this
 		},
 
