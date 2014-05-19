@@ -12,7 +12,7 @@ SVG.extend(SVG.Text, {
 		/**
 		 * Flag to show if text wrapping is enabled.
 		 */
-		_textWrapped: true,
+		_textWrapped: false,
 
 		/**
 		 * Stores the original, unwrapped text. Used as wrapped flag changes.
@@ -63,6 +63,7 @@ SVG.extend(SVG.Text, {
 				}
 
 				/* build new lines */
+				this.build(true)
 				for (i = 0, il = lines.length; i < il; i++)
 					this.tspan(lines[i]).newLine()
 
